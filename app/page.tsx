@@ -1,73 +1,78 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
       <section className="relative flex min-h-[760px] items-center overflow-hidden bg-brand-black text-white">
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,21,18,0.98)_0%,rgba(17,21,18,0.9)_45%,rgba(17,21,18,0.58)_100%)]" />
+  <div className="absolute inset-0">
+    <Image
+      src="/images/Solarfield.png"
+      alt="Commercial solar facility in Western New York"
+      fill
+      priority
+      className="object-cover"
+    />
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-36 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-brand-green-light">
-              Solar Vegetation Management
-            </p>
+    <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,21,18,0.98)_0%,rgba(17,21,18,0.90)_42%,rgba(17,21,18,0.52)_100%)]" />
+  </div>
 
-            <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
-              Protecting Your Solar Investment From the Ground Up.
-            </h1>
+  <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-28 lg:px-8">
+    <div className="max-w-3xl">
+      <p className="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-brand-green-light">
+        WNY Solar Landscaping
+      </p>
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
-              Specialized mowing, vegetation control, and site maintenance for
-              commercial solar facilities throughout Western New York.
-            </p>
+      <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
+        Tame your Turf. Protect your Panels. 
+      </h1>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Link
-                href="/contact"
-                className="rounded-full bg-brand-green px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-green-dark"
-              >
-                Request a Quote
-              </Link>
+      <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
+        Specialized mowing, vegetation control, and site maintenance for
+        commercial solar facilities throughout Western New York.
+      </p>
 
-              <Link
-                href="/services"
-                className="rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10"
-              >
-                View Our Services
-              </Link>
-            </div>
+      <div className="mt-10 flex flex-wrap items-center gap-4">
+        <Link
+          href="/contact"
+          className="rounded-full bg-brand-green px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-green-dark"
+        >
+          Request a Quote
+        </Link>
 
-            <div className="mt-14 grid max-w-2xl gap-6 border-t border-white/15 pt-8 sm:grid-cols-3">
-              <div>
-                <p className="text-sm font-semibold text-white">
-                  Solar Focused
-                </p>
-                <p className="mt-2 text-sm leading-6 text-white/55">
-                  Maintenance designed around solar infrastructure.
-                </p>
-              </div>
+        <Link
+          href="/services"
+          className="rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10"
+        >
+          View Our Services
+        </Link>
+      </div>
 
-              <div>
-                <p className="text-sm font-semibold text-white">
-                  Commercial Sites
-                </p>
-                <p className="mt-2 text-sm leading-6 text-white/55">
-                  Built for solar farms, operators, and property managers.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-sm font-semibold text-white">
-                  Western New York
-                </p>
-                <p className="mt-2 text-sm leading-6 text-white/55">
-                  Local service with reliable communication.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="mt-14 grid max-w-2xl gap-6 border-t border-white/15 pt-8 sm:grid-cols-3">
+        <div>
+          <p className="text-sm font-semibold text-white">Solar Focused</p>
+          <p className="mt-2 text-sm leading-6 text-white/55">
+            Maintenance designed around solar infrastructure.
+          </p>
         </div>
-      </section>
+
+        <div>
+          <p className="text-sm font-semibold text-white">Commercial Sites</p>
+          <p className="mt-2 text-sm leading-6 text-white/55">
+            Built for solar farms, operators, and property managers.
+          </p>
+        </div>
+
+        <div>
+          <p className="text-sm font-semibold text-white">Western New York</p>
+          <p className="mt-2 text-sm leading-6 text-white/55">
+            Local service with reliable communication.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="bg-brand-dark py-24 text-white sm:py-32">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
