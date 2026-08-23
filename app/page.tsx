@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <section className="relative flex min-h-[760px] items-center overflow-hidden bg-brand-black text-white">
+      <section className="relative flex min-h-[680px] items-center overflow-hidden bg-brand-black text-white sm:min-h-[760px]">
   <div className="absolute inset-0">
     <Image
       src="/images/Solarfield.png"
@@ -23,7 +23,7 @@ export default function Home() {
         WNY Solar Landscaping
       </p>
 
-      <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
+      <h1 className="max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
         Tame your Turf. Protect your Panels. 
       </h1>
 
@@ -102,7 +102,7 @@ export default function Home() {
       <div className="grid gap-px overflow-hidden rounded-3xl bg-white/10 sm:grid-cols-2">
         <div className="bg-white/[0.04] p-8">
           <span className="text-sm font-semibold text-brand-green-light">
-            01
+            
           </span>
           <h3 className="mt-10 text-xl font-semibold">
             Specialized Landscaping
@@ -114,7 +114,7 @@ export default function Home() {
 
         <div className="bg-white/[0.04] p-8">
           <span className="text-sm font-semibold text-brand-green-light">
-            02
+            
           </span>
           <h3 className="mt-10 text-xl font-semibold">
             Infrastructure Awareness
@@ -126,7 +126,7 @@ export default function Home() {
 
         <div className="bg-white/[0.04] p-8">
           <span className="text-sm font-semibold text-brand-green-light">
-            03
+            
           </span>
           <h3 className="mt-10 text-xl font-semibold">
             Clear Communication
@@ -138,7 +138,7 @@ export default function Home() {
 
         <div className="bg-white/[0.04] p-8">
           <span className="text-sm font-semibold text-brand-green-light">
-            04
+            
           </span>
           <h3 className="mt-10 text-xl font-semibold">
             Reliable Service
