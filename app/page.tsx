@@ -6,13 +6,19 @@ export default function Home() {
     <main>
       <section className="relative flex min-h-[680px] items-center overflow-hidden bg-brand-black text-white sm:min-h-[760px]">
   <div className="absolute inset-0">
-    <Image
-      src="/images/Solarfield.png"
-      alt="Commercial solar facility in Western New York"
-      fill
-      priority
-      className="object-cover"
-    />
+    <div className="absolute inset-0 flex items-center justify-center">
+  <Image
+    src="/images/logo.jpeg"
+    alt="WNY Solar Landscaping LLC"
+    width={1400}
+    height={1400}
+    priority
+    quality={100}
+    className="h-auto w-[85%] max-w-[1100px] object-contain"
+  />
+
+  <div className="absolute inset-0 bg-[rgba(17,21,18,0.72)]" />
+</div>
 
     <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,21,18,0.98)_0%,rgba(17,21,18,0.90)_42%,rgba(17,21,18,0.52)_100%)]" />
   </div>
