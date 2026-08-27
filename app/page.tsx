@@ -4,20 +4,26 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <section className="relative flex min-h-[680px] items-center overflow-hidden bg-brand-black text-white sm:min-h-[760px]">
+      <section className="relative flex min-h-[780px] items-center overflow-hidden bg-brand-black text-white sm:min-h-[850px]">
   <div className="absolute inset-0">
     <div className="absolute inset-0 flex items-center justify-center">
+ <div className="absolute inset-0 flex items-center justify-center">
+<div className="absolute inset-0">
   <Image
     src="/images/logo.jpeg"
     alt="WNY Solar Landscaping LLC"
-    width={1400}
-    height={1400}
+    fill
     priority
     quality={100}
-    className="h-auto w-[85%] max-w-[1100px] object-contain"
+    sizes="100vw"
+    className="object-cover"
   />
 
-  <div className="absolute inset-0 bg-[rgba(17,21,18,0.72)]" />
+  <div className="absolute inset-0 bg-black/10" />
+</div>
+</div>
+
+  <div className="absolute inset-0 bg-[rgba(154, 160, 155, 0.48)]" />
 </div>
 
     <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,21,18,0.98)_0%,rgba(17,21,18,0.90)_42%,rgba(17,21,18,0.52)_100%)]" />
@@ -139,53 +145,7 @@ export default function Home() {
   </div>
 </section>
 
-<section className="bg-background py-24 sm:py-32">
-  <div className="mx-auto max-w-7xl px-6 lg:px-8">
-    <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-      <div className="max-w-2xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
-          Our Work
-        </p>
 
-        <h2 className="mt-4 text-4xl font-semibold tracking-[-0.03em] text-brand-black sm:text-5xl">
-          Built for the unique demands of solar sites.
-        </h2>
-      </div>
-
-      <Link
-        href="/projects"
-        className="text-sm font-semibold text-brand-green transition hover:text-brand-green-dark"
-      >
-        View Our Work →
-      </Link>
-    </div>
-
-    <div className="mt-14 grid gap-6 lg:grid-cols-[1.4fr_0.6fr]">
-      <div className="flex min-h-[480px] items-end rounded-3xl bg-brand-green-light p-8 sm:p-10">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-brand-green">
-            Project Photography Coming Soon
-          </p>
-
-          <h3 className="mt-3 max-w-lg text-3xl font-semibold tracking-tight text-brand-black">
-            Real work. Real solar facilities. Real results.
-          </h3>
-
-          <p className="mt-4 max-w-lg leading-7 text-text-secondary">
-            Project photography will showcase vegetation management,
-            equipment, site conditions, and completed work throughout Western
-            New York.
-          </p>
-        </div>
-      </div>
-
-      <div className="grid gap-6">
-        <div className="min-h-[225px] rounded-3xl bg-surface-muted" />
-        <div className="min-h-[225px] rounded-3xl bg-brand-dark" />
-      </div>
-    </div>
-  </div>
-</section>
 
 <section className="bg-brand-green py-20 text-white sm:py-24">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
