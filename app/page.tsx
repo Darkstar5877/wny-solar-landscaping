@@ -20,16 +20,19 @@ export default function Home() {
   <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-28 lg:px-8">
     <div className="max-w-3xl">
       <p className="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-brand-green-light">
-        WNY Solar Landscaping
+      
       </p>
 
       <h1 className="max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
-        Tame your Turf. Protect your Panels. 
+        WNYSolarLandscaping
       </h1>
 
       <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
         Specialized mowing, vegetation control, and site maintenance for
         commercial solar facilities throughout Western New York.
+      </p>
+      <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
+      Whether fixed, or tracking, we work carefully around solar infrastructure while keeping your property accessible, maintained, and ready for the people responsible for its operation.
       </p>
 
       <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -46,29 +49,7 @@ export default function Home() {
         >
           View Our Services
         </Link>
-      </div>
-
-      <div className="mt-14 grid max-w-2xl gap-6 border-t border-white/15 pt-8 sm:grid-cols-3">
-        <div>
-          <p className="text-sm font-semibold text-white">Solar Focused</p>
-          <p className="mt-2 text-sm leading-6 text-white/55">
-            Maintenance designed around solar infrastructure.
-          </p>
-        </div>
-
-        <div>
-          <p className="text-sm font-semibold text-white">Commercial Sites</p>
-          <p className="mt-2 text-sm leading-6 text-white/55">
-            Built for solar farms, operators, and property managers.
-          </p>
-        </div>
-
-        <div>
-          <p className="text-sm font-semibold text-white">Western New York</p>
-          <p className="mt-2 text-sm leading-6 text-white/55">
-            Local service with reliable communication.
-          </p>
-        </div>
+      
       </div>
     </div>
   </div>
@@ -83,7 +64,7 @@ export default function Home() {
         </p>
 
         <h2 className="mt-4 text-4xl font-semibold tracking-[-0.03em] sm:text-5xl lg:text-6xl">
-          We&apos;re not just mowing grass.
+          We&apos;re here to help
         </h2>
 
         <p className="mt-8 max-w-xl text-lg leading-8 text-white/65">
