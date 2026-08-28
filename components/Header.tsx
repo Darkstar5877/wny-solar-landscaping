@@ -59,14 +59,30 @@ export default function Header() {
 </nav>
 
         {/* Desktop Quote Button */}
-        <div className="ml-auto hidden md:block">
-          <Link
-            href="/contact"
-            className="rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-green-dark"
-          >
-            Request a Quote
-          </Link>
-        </div>
+       <div className="ml-auto flex items-center gap-6">
+  <div className="hidden lg:flex flex-col items-end text-sm leading-tight">
+    <a
+      href="tel:5855551234"
+      className="font-semibold text-white transition hover:text-brand-green-light"
+    >
+      (716) 392-2427
+    </a>
+
+    <a
+      href="mailto:wnysolarlandscaping@gmail.com"
+      className="mt-1 text-white/70 transition hover:text-brand-green-light"
+    >
+      wnysolarlandscaping@gmail.com
+    </a>
+  </div>
+
+  <Link
+    href="/#quote"
+    className="rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-green-dark"
+  >
+    Request a Quote
+  </Link>
+</div>
 
         {/* Mobile Menu Button */}
         <button

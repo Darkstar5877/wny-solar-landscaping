@@ -46,19 +46,7 @@ export default function Footer() {
                 About
               </Link>
 
-              <Link
-                href="/services"
-                className="text-white/70 transition hover:text-white"
-              >
-                Services
-              </Link>
-
-              <Link
-                href="/projects"
-                className="text-white/70 transition hover:text-white"
-              >
-                Projects
-              </Link>
+            
             </nav>
           </div>
 
@@ -69,8 +57,8 @@ export default function Footer() {
             </p>
 
             <p className="mt-6 leading-7 text-white/55">
-              Have a commercial solar facility that needs vegetation
-              management?
+              (716) 392-2427
+              wnysolarlandscaping@gmail.com
             </p>
 
             <Link

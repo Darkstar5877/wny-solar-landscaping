@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import QuoteForm from "@/components/QuoteForm";
 
 export default function Home() {
   return (
@@ -169,7 +170,7 @@ export default function Home() {
         href="/contact"
         className="inline-flex w-fit rounded-full bg-white px-7 py-4 text-sm font-semibold text-brand-green transition hover:bg-background"
       >
-        Request a Site Assessment
+        Request a Quote
       </Link>
     </div>
   </div>

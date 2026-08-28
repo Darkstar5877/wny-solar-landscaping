@@ -4,58 +4,88 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
+    if (!process.env.RESEND_API_KEY || !process.env.CONTACT_TO_EMAIL) {
+      return Response.json(
+        { error: "Email service is not configured." },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
 
-    const {
-      firstName,
-      lastName,
-      company,
-      email,
-      phone,
-      location,
-      siteSize,
-      message,
-    } = body;
+    const firstName = String(body.firstName ?? "").trim();
+    const lastName = String(body.lastName ?? "").trim();
+    const company = String(body.company ?? "").trim();
+    const email = String(body.email ?? "").trim();
+    const phone = String(body.phone ?? "").trim();
+    const location = String(body.location ?? "").trim();
+    const siteSize = String(body.siteSize ?? "").trim();
+    const message = String(body.message ?? "").trim();
+    const website = String(body.website ?? "").trim();
 
-    if (!firstName || !lastName || !company || !email || !location || !message) {
+    // Hidden spam field
+    if (website) {
+      return Response.json({ success: true });
+    }
+
+    if (
+      !firstName ||
+      !lastName ||
+      !company ||
+      !email ||
+      !location ||
+      !message
+    ) {
       return Response.json(
         { error: "Please complete all required fields." },
         { status: 400 }
       );
     }
 
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+      return Response.json(
+        { error: "Please enter a valid email address." },
+        { status: 400 }
+      );
+    }
+
     const { data, error } = await resend.emails.send({
       from: "WNY Solar Landscaping <onboarding@resend.dev>",
-      to: ["onboarding@resend.dev"],
+      to: [process.env.CONTACT_TO_EMAIL],
       replyTo: email,
       subject: `New Quote Request - ${company}`,
-      html: `
-        <h2>New WNY Solar Landscaping Quote Request</h2>
+      text: `
+New WNY Solar Landscaping Quote Request
 
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Company:</strong> ${company}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-        <p><strong>Project Location:</strong> ${location}</p>
-        <p><strong>Approximate Site Size:</strong> ${siteSize || "Not provided"}</p>
+Name: ${firstName} ${lastName}
+Company: ${company}
+Email: ${email}
+Phone: ${phone || "Not provided"}
+Project Location: ${location}
+Approximate Site Size: ${siteSize || "Not provided"}
 
-        <h3>Project Details</h3>
-        <p>${message}</p>
-      `,
+Project Details:
+${message}
+      `.trim(),
     });
 
     if (error) {
-      console.error(error);
+      console.error("Resend error:", error);
 
       return Response.json(
-        { error: "Unable to send your request." },
+        { error: "Unable to send your request right now." },
         { status: 500 }
       );
     }
 
-    return Response.json({ success: true, data });
+    return Response.json({
+      success: true,
+      id: data?.id,
+    });
   } catch (error) {
-    console.error(error);
+    console.error("Contact form error:", error);
 
     return Response.json(
       { error: "Something went wrong." },
