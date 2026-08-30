@@ -1,81 +1,81 @@
-import QuoteForm from "@/components/QuoteForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Request a Quote",
+  title: "Contact",
   description:
-    "Contact WNY Solar Landscaping about vegetation management and site maintenance for your commercial solar facility.",
+    "Contact WNY Solar Landscaping for commercial solar vegetation management and site maintenance.",
 };
 
 export default function ContactPage() {
   return (
     <main>
-      {/* Hero */}
-      <section className="bg-brand-black pb-24 pt-40 text-white sm:pb-28 sm:pt-44">
+      <section className="bg-brand-black py-20 text-white sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-green-light">
-              Contact
-            </p>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-green-light">
+            Get In Touch
+          </p>
 
-            <h1 className="mt-6 text-5xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
-              Tell us about your solar site.
-            </h1>
+          <h1 className="mt-4 text-5xl font-semibold tracking-[-0.04em] sm:text-6xl">
+            Contact
+          </h1>
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-white/65 sm:text-xl">
-              Looking for vegetation management or site maintenance? Give us
-              some information about your facility and we&apos;ll get in
-              touch.
-            </p>
-          </div>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/65">
+            Reach out to WNY Solar Landscaping about commercial solar
+            vegetation management and site maintenance.
+          </p>
         </div>
       </section>
 
-      {/* Contact */}
       <section className="bg-background py-24 sm:py-32">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[0.7fr_1.3fr] lg:px-8">
-          
-          {/* Contact Information */}
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
-              Request a Site Assessment
-            </p>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-xl space-y-10">
+            <div>
+              <h2 className="text-lg font-bold text-brand-black">
+                Located
+              </h2>
 
-            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.03em] text-brand-black">
-              Let&apos;s talk about your facility.
-            </h2>
-
-            <p className="mt-6 max-w-md leading-7 text-text-secondary">
-              Provide some basic information about your solar site and the
-              services you&apos;re looking for. We&apos;ll follow up to
-              discuss the property and determine the next steps.
-            </p>
-
-            <div className="mt-10 border-t border-border pt-8">
-              <p className="text-sm font-semibold text-brand-black">
-                Service Area
-              </p>
-
-              <p className="mt-2 text-text-secondary">
-                Western New York and surrounding areas
+              <p className="mt-2 text-lg text-text-secondary">
+                Western New York
               </p>
             </div>
 
-            <div className="mt-8 border-t border-border pt-8">
-              <p className="text-sm font-semibold text-brand-black">
-                Commercial Services
-              </p>
+            <div>
+              <h2 className="text-lg font-bold text-brand-black">
+                Email
+              </h2>
 
-              <p className="mt-2 text-text-secondary">
-                Solar farms, commercial solar facilities, developers,
-                operators, and property managers.
+              <a
+                href="mailto:wnysolarlandscaping@gmail.com"
+                className="mt-2 inline-block text-lg text-text-secondary transition hover:text-brand-green"
+              >
+                wnysolarlandscaping@gmail.com
+              </a>
+            </div>
+
+            <div>
+              <h2 className="text-lg font-bold text-brand-black">
+                Call
+              </h2>
+
+              <a
+                href="tel:17163922427"
+                className="mt-2 inline-block text-lg text-text-secondary transition hover:text-brand-green"
+              >
+                (716) 392-2427
+              </a>
+            </div>
+
+            <div>
+              <h2 className="text-lg font-bold text-brand-black">
+                Hours
+              </h2>
+
+              <p className="mt-2 text-lg leading-8 text-text-secondary">
+                Monday—Friday
+                <br />
+                8am—5pm
               </p>
             </div>
-          </div>
-
-          {/* Quote Form */}
-          <div className="rounded-3xl border border-border bg-surface p-8 shadow-sm sm:p-10">
-              <QuoteForm />
           </div>
         </div>
       </section>

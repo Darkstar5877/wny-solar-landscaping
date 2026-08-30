@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    number: "01",
     title: "Solar Vegetation Management",
     description:
       "Routine mowing and vegetation control designed specifically for commercial solar facilities.",
@@ -21,7 +20,6 @@ const services = [
     ],
   },
   {
-    number: "02",
     title: "Panel & Row Maintenance",
     description:
       "Careful vegetation management around solar arrays and the infrastructure that supports them.",
@@ -33,7 +31,6 @@ const services = [
     ],
   },
   {
-    number: "03",
     title: "Perimeter & Access Maintenance",
     description:
       "Keeping the areas surrounding a solar facility manageable, accessible, and professionally maintained.",
@@ -45,7 +42,6 @@ const services = [
     ],
   },
   {
-    number: "04",
     title: "Site Observation & Feedback",
     description:
       "Another set of eyes on the property while routine vegetation work is being performed.",
@@ -111,21 +107,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Service List */}
+      {/* Services */}
       <section className="bg-surface-muted py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="space-y-6">
             {services.map((service) => (
               <article
-                key={service.number}
-                className="grid gap-10 rounded-3xl border border-border bg-surface p-8 sm:p-10 lg:grid-cols-[0.15fr_0.85fr_1fr] lg:p-12"
+                key={service.title}
+                className="grid gap-10 rounded-3xl border border-border bg-surface p-8 sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:p-12"
               >
-                <div>
-                  <span className="text-sm font-semibold text-brand-green">
-                    {service.number}
-                  </span>
-                </div>
-
                 <div>
                   <h2 className="text-2xl font-semibold tracking-tight text-brand-black sm:text-3xl">
                     {service.title}
@@ -138,9 +128,9 @@ export default function ServicesPage() {
 
                 <div className="border-t border-border pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
                   <ul className="space-y-4">
-                    {service.details.map((detail) => (
+                    {service.details.map((detail, index) => (
                       <li
-                        key={detail}
+                        key={`${service.title}-${index}`}
                         className="flex items-start gap-3 text-text-secondary"
                       >
                         <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-green" />
@@ -205,7 +195,7 @@ export default function ServicesPage() {
           </div>
 
           <Link
-            href="/contact"
+            href="/quote"
             className="inline-flex w-fit rounded-full bg-white px-7 py-4 text-sm font-semibold text-brand-green transition hover:bg-background"
           >
             Request a Quote

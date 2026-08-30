@@ -176,7 +176,7 @@ export default function Home() {
   </div>
 </section>
 
-      <section className="bg-background py-24 sm:py-32">
+      <section id="quote" className="bg-background py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
             <div>
@@ -206,7 +206,7 @@ export default function Home() {
 
           <div className="mt-16 grid gap-6 md:grid-cols-3">
             <article className="rounded-3xl border border-border bg-surface p-8">
-              <p className="text-sm font-semibold text-brand-green">01</p>
+              <p className="text-sm font-semibold text-brand-green"></p>
               <h3 className="mt-8 text-2xl font-semibold tracking-tight text-brand-black">
                 Vegetation Management
               </h3>
@@ -217,7 +217,7 @@ export default function Home() {
             </article>
 
             <article className="rounded-3xl border border-border bg-surface p-8">
-              <p className="text-sm font-semibold text-brand-green">02</p>
+              <p className="text-sm font-semibold text-brand-green"></p>
               <h3 className="mt-8 text-2xl font-semibold tracking-tight text-brand-black">
                 Site Awareness
               </h3>
@@ -228,7 +228,7 @@ export default function Home() {
             </article>
 
             <article className="rounded-3xl border border-border bg-surface p-8">
-              <p className="text-sm font-semibold text-brand-green">03</p>
+              <p className="text-sm font-semibold text-brand-green"></p>
               <h3 className="mt-8 text-2xl font-semibold tracking-tight text-brand-black">
                 Site Feedback
               </h3>
