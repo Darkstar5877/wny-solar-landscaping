@@ -62,7 +62,7 @@ export default function Footer() {
             </p>
 
             <Link
-              href="/contact"
+              href="/quote"
               className="mt-6 inline-flex rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-green-dark"
             >
               Request a Quote

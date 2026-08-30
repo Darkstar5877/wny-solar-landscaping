@@ -50,7 +50,7 @@ export default function Home() {
 
       <div className="mt-10 flex flex-wrap items-center gap-4">
         <Link
-          href="/contact"
+          href="/quote"
           className="rounded-full bg-brand-green px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-green-dark"
         >
           Request a Quote
@@ -167,7 +167,7 @@ export default function Home() {
       </div>
 
       <Link
-        href="/contact"
+        href="/quote"
         className="inline-flex w-fit rounded-full bg-white px-7 py-4 text-sm font-semibold text-brand-green transition hover:bg-background"
       >
         Request a Quote
