@@ -31,17 +31,17 @@ export default function ContactPage() {
           <div className="max-w-xl space-y-10">
             <div>
               <h2 className="text-lg font-bold text-brand-black">
-                Located
+                Location:
               </h2>
 
               <p className="mt-2 text-lg text-text-secondary">
-                Western New York
+                Western New York, Rochester
               </p>
             </div>
 
             <div>
               <h2 className="text-lg font-bold text-brand-black">
-                Email
+                Reach us at:
               </h2>
 
               <a
