@@ -20,7 +20,7 @@ export default function Home() {
     className="object-cover"
   />
 
-  <div className="absolute inset-0 bg-black/10" />
+  <div className="absolute inset-0 bg-black/60" />
 </div>
 </div>
 
@@ -35,10 +35,16 @@ export default function Home() {
       <p className="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-brand-green-light">
       
       </p>
-
-      <h1 className="max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
-        WNYSolarLandscaping
+      <p className="mb-5 text-sm font-bold uppercase tracking-[0.22em] text-brand-gold">
+  Commercial Solar Site Maintenance
+</p>
+      <h1 className="max-w-5xl text-5xl font-bold leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+        WNY Solar 
+         <span className="block text-brand-green-light">
+          Landscsaping
+        </span>
       </h1>
+         
 
       <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
         Specialized mowing, vegetation control, and site maintenance for
