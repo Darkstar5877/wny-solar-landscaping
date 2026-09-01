@@ -41,7 +41,7 @@ export default function Home() {
       <h1 className="max-w-5xl text-5xl font-bold leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
         WNY Solar 
          <span className="block text-brand-green-light">
-          Landscsaping
+          Landscaping
         </span>
       </h1>
          
