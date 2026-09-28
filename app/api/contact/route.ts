@@ -52,7 +52,7 @@ export async function POST(request: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "WNY Solar Landscaping <onboarding@resend.dev>",
+      from: "WNY Solar Landscaping <quotes@wnysolarlandscaping.com>",
       to: [process.env.CONTACT_TO_EMAIL],
       replyTo: email,
       subject: `New Quote Request - ${company}`,
